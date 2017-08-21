@@ -1,5 +1,7 @@
 # vuex-tut
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/inside-demo/vuex-demo.svg)](https://greenkeeper.io/)
+
 > A Vue.js project
 
 ## Build Setup
