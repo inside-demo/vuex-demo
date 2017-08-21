@@ -10,10 +10,10 @@ Vue.config.devetools = true
 
 Vue.directive('translate-attr', {
   bind (el, binding) {
-    el[binding.arg] = store.getters.dictionary[store.getters.lang][binding.expression]
+    el[binding.arg] = store.getters.dictionary[store.getters.lang][binding.value]
   },
   update (el, binding) {
-    el[binding.arg] = store.getters.dictionary[store.getters.lang][binding.expression]
+    el[binding.arg] = store.getters.dictionary[store.getters.lang][binding.value]
   }
 })
 

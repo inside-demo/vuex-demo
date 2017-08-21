@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="text" v-translate-attr:placeholder="Home">
+    <input type="text" v-translate-attr:placeholder="'Home'">
     <button @click.prevent="activate">+1</button>
   </div>
 </template>
