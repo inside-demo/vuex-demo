@@ -9,11 +9,13 @@ import store from './store'
 Vue.config.devetools = true
 
 Vue.directive('translate-attr', {
-  bind (el, binding) {
-    el[binding.arg] = store.getters.dictionary[store.getters.lang][binding.value]
+  bind (el, binding, vnode) {
+    const val = binding.expression.split('|')[0].trim().slice(1, 5)
+    el[binding.arg] = store.getters.dictionary[store.getters.lang][val]
   },
   update (el, binding) {
-    el[binding.arg] = store.getters.dictionary[store.getters.lang][binding.value]
+    const val = binding.expression.split('|')[0].trim().slice(1, 5)
+    el[binding.arg] = store.getters.dictionary[store.getters.lang][val]
   }
 })
 

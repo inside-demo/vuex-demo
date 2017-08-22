@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="text" v-translate-attr:placeholder="'Home'">
+    <input type="text" v-translate-attr:placeholder="'Home' | translate">
     <button @click.prevent="activate">+1</button>
   </div>
 </template>
@@ -12,6 +12,9 @@ export default {
   methods: {
     activate () {
       store.dispatch('increment')
+    },
+    translate () {
+      console.log(this)
     }
   }
 }
